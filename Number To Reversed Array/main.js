@@ -1,4 +1,4 @@
-//First Selution:
+//First Solution:
 
 const convert = (num) => {
     return num.toString().split("").map(ele => Number(ele)).reverse();
@@ -7,7 +7,7 @@ const convert = (num) => {
 console.log(convert(123456789)); //[9, 8, 7, 6, 5, 4, 3, 2, 1]
 console.log(convert(56789));// [9, 8, 7, 6, 5]
 
-//Second Selution:
+//Second Solution:
 
 const convertToArray = (num) => {
     let array = [];
