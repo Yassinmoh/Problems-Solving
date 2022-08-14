@@ -28,7 +28,7 @@ const removeDuplicateWords3 = (sentence) => {
     let wordInSet = new Set(result);
     let setToArray = [...wordInSet]
     return setToArray.join(" ")
-    //shortahnd way:
+    //short way:
     // return [...new Set(sentence.split(' '))].join(" ")
 }
 console.log(removeDuplicateWords3("Hello yassin yassin i'm from from Egypt Egypt Egypt"));
