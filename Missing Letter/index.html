@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missing Letter</title>
+</head>
+
+<body>
+
+    <script>
+
+        const findMissingLetter = (givenLetter) => {
+            const Alpha = 'abcdefghijklmnopqrstuvwxyz';
+            const start = Alpha.indexOf(givenLetter[0])
+
+            for (let i = 0; i < givenLetter.length; i++) {
+                // console.log(givenLetter[i]);
+                // console.log(Alpha[start+i]);
+                if (givenLetter[i] !== Alpha[start + i]) {
+                    return Alpha[start + i]
+                }
+            }
+            return 'None Missing Letter';
+        }
+
+        console.log(findMissingLetter("defgi"));//h
+        console.log(findMissingLetter("lmnoq"));//p
+        console.log(findMissingLetter('abcdef'));//'None Missing Letter'
+    </script>
+</body>
+
+</html>
