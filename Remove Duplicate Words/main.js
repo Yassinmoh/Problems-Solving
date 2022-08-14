@@ -9,7 +9,7 @@ const removeDuplicateWords = (sentence) => {
     }
     return WordsList.join(" ")
 }
-console.log(removeDuplicateWords("Hello yassin yassin i'm from from Egypt Egypt Egypt"));
+console.log(removeDuplicateWords("Hello yassin yassin i'm from from Egypt Egypt Egypt"));//Hello yassin i'm from Egypt
 
 
 //Second Solution:
@@ -19,7 +19,7 @@ const removeDuplicateWords2 = (sentence) => {
     }).join(" ");
     return result
 }
-console.log(removeDuplicateWords2("Hello yassin yassin i'm from from Egypt Egypt Egypt"));
+console.log(removeDuplicateWords2("Hello yassin yassin i'm from from Egypt Egypt Egypt"));//Hello yassin i'm from Egypt
 
 
 //Third Solution:
@@ -31,4 +31,4 @@ const removeDuplicateWords3 = (sentence) => {
     //short way:
     // return [...new Set(sentence.split(' '))].join(" ")
 }
-console.log(removeDuplicateWords3("Hello yassin yassin i'm from from Egypt Egypt Egypt"));
+console.log(removeDuplicateWords3("Hello yassin yassin i'm from from Egypt Egypt Egypt"));//Hello yassin i'm from Egypt
