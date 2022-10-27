@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort</title>
+</head>
+
+<body>
+    <script>
+        const bubbleSort = (array) => {
+            let swap;
+            do {
+                swap = false;
+                for (let i = 0; i < array.length; i++) {
+                    if (array[i] > array[i + 1]) {
+
+                        //swap 1 using Temporary Variable:
+                        // let temp = array[i + 1]
+                        // array[i + 1] = array[i]
+                        // array[i] = temp;
+
+                        //swap 2 using Destructuring:
+                        [array[i], array[i + 1]] = [array[i + 1], array[i]];
+                        swap = true;
+                    }
+                }
+            }
+            while (swap)
+            return array
+        }
+        console.log(bubbleSort([5, 8, 1, 4, 2, 9, 7])); //[1, 2, 4, 5, 7, 8, 9]
+    </script>
+</body>
+
+</html>
