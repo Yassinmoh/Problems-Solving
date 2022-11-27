@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamza Nabile</title>
+</head>
+
+<body>
+    <script>
+        // Sum 1 to N
+        const sumToN = (num) => {
+            let result = 0;
+            for (let i = 1; i <= num; i++) {
+                result += i
+            }
+            return result
+        }
+        console.log(sumToN(5)); //15
+
+
+        //------------------- get Char Count -------------------
+        const CharCount = (string, char) => {
+            let result = []
+            let ArrayOfString = string.split('').filter((ele) => {
+                return ele === char ? result.push(ele) : ''
+            })
+            return result.length
+        }
+        console.log(CharCount('yassin', 's')); //2
+        //---------------- factorial ----------------
+        const factorial = (num) => {
+            let result = 1;
+            for (let i = num; i >= 1; i--) {
+                result = result * i
+            }
+            return result
+        }
+        console.log(factorial(5)); //120
+
+
+        const factorialRecarsion = (num) => {
+            if (num === 0) return 1
+            return num * factorialRecarsion(num - 1)
+        }
+        console.log(factorialRecarsion(5));
+
+        //---------------- convert to array ----------------
+        // const toArrayFunction = (start, end, step) => {
+        //     let array = []
+        //     let sum = 0;
+        //     if (start < end && step < 0) {
+        //         [start, end] = [end, start]
+        //     }
+        //     if (step > 0) {
+        //         for (let i = start; i <= end; i += step) {
+        //             array.push(i)
+        //             console.log(array);
+        //         }
+        //     }
+        //     else {
+        //         for (let i = start; i <= end; i += step) {
+        //             array.push(i)
+        //             console.log(array);
+        //         }
+        //     }
+
+        //     sum = array.reduce((acc, curr) => {
+        //         return acc + curr
+        //     })
+        //     return array
+        // }
+
+        // console.log(toArrayFunction(1, 5, 1));
+        // console.log(toArrayFunction(5, 1, -1));
+
+        //---------------- Get Count String Chars ----------------
+        const countStringChars = (string) => {
+            let obj = {}
+            string.split("").forEach(element => {
+                if (obj[element]) {
+                    obj[element] = obj[element] + 1
+                } else {
+                    obj[element] = 1
+                }
+            });
+            return obj
+        }
+        console.log(countStringChars("yassin"));
+
+
+        //---------------- Get Meddle Str ----------------
+        const getMeddleStr = (str) => {
+            let length = str.length
+            let mid = length / 2
+            if (length % 2 == 0) {
+                return str[mid - 1] + str[mid];
+            } else {
+                return str[Math.floor(mid)];
+            }
+
+        }
+        console.log(getMeddleStr('yas')); //a
+        console.log(getMeddleStr('test')); //es
+
+        //---------------- Split String ----------------
+        const splitedString= (string)=>{
+            let arr =string.split("")
+            let newArray =[]
+            for(let i =1 ; i < arr.length; i++){
+                let a =arr.slice(0,i).join(".")
+                newArray.push(a)            
+            }
+            return newArray
+        }
+        console.log(splitedString("yassinmohamed"));
+
+        //---------------- Split String 2 ----------------
+        const splitedString2= (string) =>{
+            let result = string.split("")
+            let output= result.map((ele,index,arrar)=>{
+                return arrar.slice(0 ,index +1).join(".")
+            })
+            return output
+        }
+        console.log(splitedString2("yassinmohamed"));
+
+    </script>
+</body>
+
+</html>

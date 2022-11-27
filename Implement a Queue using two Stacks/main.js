@@ -24,3 +24,8 @@ class QueueUsingTwoStacks {
     }
 }
 
+const stack_1 =new QueueUsingTwoStacks()
+stack_1.enqueue(10)
+stack_1.enqueue(20)
+stack_1.enqueue(30)
+console.log(stack_1.size());
