@@ -1,0 +1,31 @@
+<script>
+    
+const countConsonants = (string) => {
+    let strto = string.toLowerCase()
+    let peurAlpha = []
+    for (let i = 0; i < strto.length; i++) {
+        if (strto[i] !== 'a' && strto[i] !== 'e' && strto[i] !== 'o' && strto[i] !== 'u' && strto[i] !== 'i') {
+            peurAlpha.push(strto[i])
+        }
+    }
+    let res = new Set(peurAlpha)
+    let setToArray = Array.from(res)
+    let removeNums = []
+    for (let i = 0; i < setToArray.length; i++) {
+        if (isFinite(Number(setToArray[i])) == false && setToArray[i] !== '!') {
+            removeNums.push(setToArray[i])
+        }
+    }
+    return removeNums.length
+}
+
+
+//  Clever Solution
+const countConsonants2 =(str)=>{
+    return new Set(str.toLowerCase().replace(/[^a-z]|[aieou]/g,'')).size
+}
+
+
+console.log(countConsonants("sillystring")); //7
+console.log(countConsonants2("sillystring")); //7
+</script>
